@@ -1,23 +1,13 @@
 <template>
   <section class="container">
-    <div>
+    <div class="title">
       <app-logo/>
-      <h1 class="title">
-        engine-search
-      </h1>
-      <h2 class="subtitle">
-        Engineer's skill searching system
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
+      <p>Engine Search</p>
+    </div>
+
+    <div class="menu">
+      <a class="btn search" href="#">エンジニア検索</a>
+      <a class="btn register" href="#">スキル登録</a>
     </div>
   </section>
 </template>
@@ -35,31 +25,58 @@ export default {
 <style>
 .container {
   min-height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
+  padding-top: 30px;
+  background-image: url('~assets/top-page.jpg');
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .title {
+  position: relative;
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: white;
   letter-spacing: 1px;
+  padding-top: 30px;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.menu {
+  position: relative;
+  padding-top: 80px;
 }
 
-.links {
-  padding-top: 15px;
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: gray;/*ボタン色*/
+  color: white;/*ボタン色より暗く*/
+  box-shadow: 0 2px rgba(46, 47, 52, 0.98);
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 40px;
+}
+
+.btn:active  {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
 }
 </style>
 
