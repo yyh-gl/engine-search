@@ -6,7 +6,7 @@
     </div>
 
     <div class="menu">
-      <a class="btn search" href="#">エンジニア検索</a>
+      <a class="btn search" href="/search">エンジニア検索</a>
       <a class="btn register" href="#">スキル登録</a>
     </div>
   </section>
@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container {
   min-height: 100vh;
   justify-content: center;
