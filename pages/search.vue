@@ -4,13 +4,16 @@
       <p>エンジニア検索</p>
     </div>
 
-     <!-- TODO: デザインを作り込む -->
-    <select>
-      <option disabled value="none" selected>言語を選択</option>
-      <option v-for="lang in langList" v-bind:key="lang.id" v-bind:value="lang.id">
-        {{ lang.name }}
-      </option>
-    </select>
+    <!-- TODO: デザインを作り込む -->
+    <form>
+      <select>
+        <option disabled value="none" selected>言語を選択</option>
+        <option v-for="lang in langList" v-bind:key="lang.id" v-bind:value="lang.id">
+          {{ lang.name }}
+        </option>
+      </select>
+      <input type="submit" value="検索">
+    </form>
 
   </section>
 </template>
@@ -59,6 +62,10 @@
   }
 
   select {
+    position: relative;
+  }
+
+  input {
     position: relative;
   }
 
